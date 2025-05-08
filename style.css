@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    height: 200vh;
+    background: linear-gradient(45deg, rgb(136, 5, 243), rgb(70, 68, 68), rgb(247, 4, 4));
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: color 8s ease-in-out infinite;
+}
+
+.tarolo{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.kerdesTarolo{
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+    "c"
+    "v";
+    gap: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px;
+    width: 600px;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+
+.cim{
+    grid-area: c;
+    background-color: rgb(207, 88, 88);
+    color: white;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-shadow: 3px 3px 3px rgb(136, 5, 243), -3px -3px 3px rgb(247, 4, 4);
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.valasztasok{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: v;
+    gap: 20px;
+}
+
+.valasztas{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.valasztas:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:700px) {
+    body{
+        width: 100%;
+    }
+    .kerdesTarolo{
+        width: 100%;
+    }
+    .valasztasok{
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
