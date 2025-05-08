@@ -1,3 +1,5 @@
+let pontszam = 0;
+const pontszamTarolo = document.getElementById("pontszamTarolo");
 export default class TesztKerdes {
     #szuloElem;
     #obj = {};
@@ -41,9 +43,12 @@ export default class TesztKerdes {
     
                 if (kivalasztottValasz === helyesValasz) {
                     gomb.style.backgroundColor = "rgb(12, 241, 5)";
+                    pontszam+=1;
+                    pontszamTarolo.textContent = `Pontszám: ${pontszam}`;
                 } else {
                     gomb.style.backgroundColor = "red";
                 }
+                gombok.forEach(g => g.disabled = true);
         });
             })
 
